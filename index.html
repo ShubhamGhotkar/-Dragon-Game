@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dragon Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="Data_container">
+        <audio id="audio_start">
+          <source src="audio/Move-Forward.mp3" type="audio/mp3" />
+        </audio>
+
+        <audio id="audio_stop">
+          <source src="audio/gameOver.wav" type="audio/wav" />
+        </audio>
+
+        <audio id="audio_jump">
+          <source src="audio/jump.wav" type="audio/wav" />
+        </audio>
+
+        <p id="score" class="display-none">SCORE : 0</p>
+
+        <button id="startbutton" onclick="startGame()">START</button>
+
+        <p id="gameover" class="display-none">GAME OVER</p>
+      </div>
+
+      <div id="players">
+        <div id="dragon" class="display-none"></div>
+        <div id="Warrior" class="display-none"></div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
