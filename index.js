@@ -1,3 +1,4 @@
+
 const button = document.getElementById('startbutton');
 const warrrier = document.getElementById('Warrior');
 const dragon = document.getElementById('dragon');
@@ -6,12 +7,13 @@ const gameOver = document.getElementById('gameover');
 const audio_start = document.getElementById('audio_start');
 const audio_stop = document.getElementById('audio_stop');
 const audio_jump = document.getElementById('audio_jump');
+
 let left_Distance = 0;
 let crossing_Check = true;
 let score_count = 0;
 
 
-
+// document.addEventListener('click', startGame)
 const startGame = () => {
     score.innerText = 'SCORE :0' + score_count;
     button.classList = 'display-none'
