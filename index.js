@@ -13,7 +13,7 @@ let score_count = 0;
 
 
 const startGame = () => {
-    score.innerText = 'SCORE :' + score_count;
+    score.innerText = 'SCORE :0' + score_count;
     button.classList = 'display-none'
     score.classList.remove('display-none')
     warrrier.classList.remove('display-none')
@@ -68,6 +68,7 @@ setInterval(() => {
         // audio_stop.play()
         let check = false
         warrrier.classList.remove('applyAnimination');
+        dragon.classList = "applyRotationAnimination"
         // audio_start.pause()
         setTimeout(() => {
             warrrier.classList = 'display-none';
@@ -75,13 +76,13 @@ setInterval(() => {
             score.classList = 'display-none';
             gameOver.classList.remove('display-none')
 
-        }, 250);
+        }, 1000);
 
         setTimeout(() => {
             button.classList.remove('display-none')
             gameOver.classList = 'display-none'
             location.reload();
-        }, 1000);
+        }, 2000);
 
     }
 
@@ -90,7 +91,12 @@ setInterval(() => {
         crossing_Check = false;
         setTimeout(() => {
             score_count += 1
-            score.innerText = `SCORE : ${score_count}`;
+            if (score_count <= 9) {
+                score.innerText = `SCORE :0 ${score_count}`;
+            }
+            else {
+                score.innerText = `SCORE : ${score_count}`;
+            }
             crossing_Check = true
         }, 1000);
     }
